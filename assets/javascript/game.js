@@ -71,10 +71,13 @@ function setUp() {
 }
 
 setUp();
+// Function that responds to a user's guess
 document.onkeyup = function(key){
     audioElement.load();
     var guess = key.key;
+    // Check to see if the letter has been guessed before
     if (guessedLetters.indexOf(guess) === -1){
+        // Check to see if the letter is in the target word
         if(currentWord.indexOf(guess) === -1){
             guessedLetters += guess;
             guessBox.innerHTML += "<span class=\"letterBox\" style=\"padding: 5px\">" + guess.toUpperCase() + ",</span>";
@@ -98,6 +101,7 @@ document.onkeyup = function(key){
         }
     }
 
+    // Check to see if word is guessed completely
     if(correctLetterCount === lengthOfWord){
         winTotal++;
         winBox.textContent = winTotal;
