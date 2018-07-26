@@ -6,17 +6,34 @@ body {
     margin: 0;
 }
 
+header {
+    width: 100%;
+    margin: 30px 0 0 0;
+}
+
+.headerImg {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .imageBody{
-    width: 50%;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     float: left;
 }
 
 .gameBody{
-    width: 50%;
+    width: 40%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
     float: left;
 }
 
 .container{
+    height: 500px;
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
