@@ -1,3 +1,24 @@
+img {
+    width: 200px;
+}
+
 body {
     margin: 0;
+}
+
+.imageBody{
+    width: 50%;
+    float: left;
+}
+
+.gameBody{
+    width: 50%;
+    float: left;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid black;
 }

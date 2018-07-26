@@ -5,8 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Word Guess Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="container">
+        <div class="imageBody">
+            <span id="winImage">
+                <img src="assets/images/lions.jpg" alt="Lions Image">
+            </span>
+        </div>
+        <div class="gameBody">
+            <div><h3>Press any key to get started!</h3></div>
+            <div><h3>Wins</h3></div>
+            <div><h3 id="winTotal"></h3></div>
+            <div id="theWord"></div>
+            <div><h3>Number of Guesses Remaining</h3></div>
+            <div><h3 id="guessesRemaining">12</h3></div>
+            <div id="guessedLetters"></div>
+        </div>
+    </div>
 
+
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
