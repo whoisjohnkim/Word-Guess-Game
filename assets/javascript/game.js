@@ -61,7 +61,7 @@ function setUp() {
     guessedLetters = "";
     guessBox.innerHTML = "";
     for(i = 0; i < currentWord.length; i++){
-        totalHTML += "<span class=\"" + currentWord[i] + "\" style=\"padding: 10px\">-</span>";
+        totalHTML += "<span class=\"" + currentWord[i] + "\" style=\"padding: 5px\">-</span>";
     }
     wordBox.innerHTML = totalHTML;
 }
@@ -72,7 +72,7 @@ document.onkeyup = function(key){
     if (guessedLetters.indexOf(guess) === -1){
         if(currentWord.indexOf(guess) === -1){
             guessedLetters += guess;
-            guessBox.innerHTML += "<span class=\"letterBox\" style=\"padding: 3px\">" + guess + ",</span>";
+            guessBox.innerHTML += "<span class=\"letterBox\" style=\"padding: 5px\">" + guess + ",</span>";
             if(remainingGuesses > 0){
                 remainingGuesses--;
                 remainBox.textContent = remainingGuesses;
