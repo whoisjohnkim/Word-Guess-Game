@@ -72,7 +72,7 @@ document.onkeyup = function(key){
     if (guessedLetters.indexOf(guess) === -1){
         if(currentWord.indexOf(guess) === -1){
             guessedLetters += guess;
-            guessBox.innerHTML += "<span class=\"letterBox\" style=\"padding: 5px\">" + guess + ",</span>";
+            guessBox.innerHTML += "<span class=\"letterBox\" style=\"padding: 5px\">" + guess.toUpperCase() + ",</span>";
             if(remainingGuesses > 0){
                 remainingGuesses--;
                 remainBox.textContent = remainingGuesses;
@@ -93,7 +93,6 @@ document.onkeyup = function(key){
     }
 
     if(correctLetterCount === lengthOfWord){
-        alert("Word is done!");
         winTotal++;
         winBox.textContent = winTotal;
         setUp();
