@@ -39,6 +39,10 @@ var wordBank = [
     }
 ]
 
+// Create audio element for correct letter
+var audioElement = document.createElement("audio");
+audioElement.setAttribute("src", "assets/images/mynameis.mp3");
+
 // Updates new word and resets all of the variables for every new word
 function setUp() {
     wordTracker++;
@@ -68,6 +72,7 @@ function setUp() {
 
 setUp();
 document.onkeyup = function(key){
+    audioElement.load();
     var guess = key.key;
     if (guessedLetters.indexOf(guess) === -1){
         if(currentWord.indexOf(guess) === -1){
@@ -83,6 +88,7 @@ document.onkeyup = function(key){
             }
         }
         else{
+            audioElement.play();
             var correctLetters = document.getElementsByClassName(guess);
             guessedLetters + guess;
             for(i = 0; i < correctLetters.length; i++){
