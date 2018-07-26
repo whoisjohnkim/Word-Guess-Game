@@ -6,24 +6,56 @@ var guessedLetters = "";
 var wordBox = document.getElementById("theWord");
 var guessBox = document.getElementById("guessedLetters");
 var remainBox = document.getElementById("guessesRemaining");
+var imageBox = document.getElementById("hintImg");
 var currentWord = "";
 var wordBank = [
-    "lions",
-    "tigers",
-    "ford",
-    "chrysler",
-    "pistons",
-    "eminem",
-    "motown",
+    {
+        name:"lions",
+        img:"assets/images/lions.jpg"
+    },
+    {
+        name: "tigers",
+        img: "assets/images/tigers.png"
+    },
+    {
+        name: "ford",
+        img: "assets/images/ford.jpeg"
+    },
+    {
+        name: "chrysler",
+        img: "assets/images/chrysler.jpg"
+    },
+    {
+        name: "pistons",
+        img: "assets/images/pistons.jpg"
+    },
+    {
+        name: "eminem",
+        img: "assets/images/eminem.jpg"
+    },
+    {
+        name: "motown",
+        img: "assets/images/motown.jpg"
+    }
 ]
 
-// Initialize all of the variables for every new word
+// Updates new word and resets all of the variables for every new word
 function setUp() {
     wordTracker++;
+
+    // Check to see if game is finished
+    if(wordTracker >= wordBank.length){
+        alert("You have guessed all the words correctly!");
+        return;
+    }
     remainingGuesses = 12;
     remainBox.textContent = remainingGuesses;
     correctLetterCount = 0;
-    currentWord = wordBank[wordTracker];
+    currentWord = wordBank[wordTracker].name;
+    console.log(currentWord);
+
+    // Changes src for the image to reflect current word
+    imageBox.src=wordBank[wordTracker].img;
     lengthOfWord = currentWord.length;
     var totalHTML = "";
     guessedLetters = "";
