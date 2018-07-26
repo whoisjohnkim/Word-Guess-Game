@@ -1,12 +1,12 @@
 var wordTracker = -1;
-var correctLetterCount = 0;
-var lengthOfWord = 0;
+var correctLetterCount, lengthOfWord, winTotal = 0;
 var remainingGuesses = 12;
 var guessedLetters = "";
 var wordBox = document.getElementById("theWord");
 var guessBox = document.getElementById("guessedLetters");
 var remainBox = document.getElementById("guessesRemaining");
 var imageBox = document.getElementById("hintImg");
+var winBox = document.getElementById("winTotal");
 var currentWord = "";
 var wordBank = [
     {
@@ -94,6 +94,8 @@ document.onkeyup = function(key){
 
     if(correctLetterCount === lengthOfWord){
         alert("Word is done!");
+        winTotal++;
+        winBox.textContent = winTotal;
         setUp();
     }
 };

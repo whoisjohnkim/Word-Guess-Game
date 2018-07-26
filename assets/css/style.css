@@ -4,6 +4,8 @@ img {
 
 body {
     margin: 0;
+    color: white;
+    background-color: black;
 }
 
 header {
@@ -26,11 +28,18 @@ header {
 }
 
 .gameBody{
-    width: 160px;
+    box-sizing: border-box;
+    width: 240px;
+    height: 100%;
     padding-top: 20px;
-    padding-right: 20px;
     padding-left: 20px;
     float: left;
+    border-left: 2px dashed white;
+}
+
+.winBox{
+    font-size: 20px;
+    padding-bottom: 15px;
 }
 
 .container{
@@ -39,5 +48,5 @@ header {
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 50px;
-    border: 2px solid black;
+    border: 2px dotted white;
 }
