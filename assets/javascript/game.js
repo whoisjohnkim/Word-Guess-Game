@@ -90,6 +90,7 @@ document.onkeyup = function(key){
                 setUp();
             }
         }
+        // If not, add it to guessed letters and update the guessed letters box shown to user
         else{
             audioElement.play();
             var correctLetters = document.getElementsByClassName(guess);
