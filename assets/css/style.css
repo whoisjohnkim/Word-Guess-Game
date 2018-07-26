@@ -17,24 +17,24 @@ header {
 }
 
 .imageBody{
-    width: 40%;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 160px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 40px;
     float: left;
 }
 
 .gameBody{
-    width: 40%;
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 160px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
     float: left;
 }
 
 .container{
     height: 500px;
-    width: 80%;
+    width: 420px;
     margin: 0 auto;
     margin-top: 100px;
     border: 2px solid black;
