@@ -61,9 +61,11 @@ function setUp() {
     // Changes src for the image to reflect current word
     imageBox.src=wordBank[wordTracker].img;
     lengthOfWord = currentWord.length;
-    var totalHTML = "";
     guessedLetters = "";
     guessBox.innerHTML = "";
+
+    // Adding dashes with correct format and number to the HTML
+    var totalHTML = "";
     for(i = 0; i < currentWord.length; i++){
         totalHTML += "<span class=\"" + currentWord[i] + "\" style=\"padding: 5px\">-</span>";
     }
@@ -73,7 +75,9 @@ function setUp() {
 setUp();
 // Function that responds to a user's guess
 document.onkeyup = function(key){
+    // Reloads the audio element
     audioElement.load();
+
     var guess = key.key;
     // Check to see if the letter has been guessed before
     if (guessedLetters.indexOf(guess) === -1){
@@ -93,10 +97,10 @@ document.onkeyup = function(key){
         // If not, add it to guessed letters and update the guessed letters box shown to user
         else{
             audioElement.play();
-            var correctLetters = document.getElementsByClassName(guess);
-            guessedLetters + guess;
-            for(i = 0; i < correctLetters.length; i++){
-                correctLetters[i].innerHTML = guess.toUpperCase();
+            var correctSpaces = document.getElementsByClassName(guess);
+            guessedLetters += guess;
+            for(var i = 0; i < correctSpaces.length; i++){
+                correctSpaces[i].textContent = guess.toUpperCase();
                 correctLetterCount++;
             }
         }
