@@ -56,7 +56,6 @@ function setUp() {
     remainBox.textContent = remainingGuesses;
     correctLetterCount = 0;
     currentWord = wordBank[wordTracker].name;
-    console.log(currentWord);
 
     // Changes src for the image to reflect current word
     imageBox.src=wordBank[wordTracker].img;
